@@ -1,0 +1,26 @@
+:root {
+  --color-primary: #2563eb;
+  --color-secondary: #10b981;
+  --color-accent: #f59e0b;
+  --color-text: #374151;
+  --color-text-light: #6b7280;
+  --color-bg: #f9fafb;
+  --color-bg-alt: #ffffff;
+  --color-border: #e5e7eb;
+  
+  --font-base: Arial;
+  --font-heading: 'Roboto';
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+}
