@@ -3,12 +3,6 @@
   src: url(/site/fonts/Oxygen-Regular.ttf);
 }
 
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .header {
   font-family: "Oxygen";
   display: flex;
@@ -77,4 +71,173 @@ body {
   box-shadow: 0 2px 8px rgba(198, 255, 0, 0.5);
 }
 
+article {
+  font-family: "Oxygen";
+}
 
+
+body {
+  font-family: "Oxygen", sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* --- Hero (первый экран) --- */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../images/main-photo.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Затемнение поверх фото */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  text-align: center;
+  color: antiquewhite;
+  z-index: 3;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0 0 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-tagline {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-tagline span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- Intro (краткая сводка) --- */
+.intro {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.intro-text {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+/* --- Stats (статистика) --- */
+.stats {
+  padding: 40px 0;
+  background: #f9f9f9;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #517d75;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-buttons {
+  position: absolute;
+  top: 50%;       /* Центрируем по вертикали */
+  left: 40px;     /* Отступ слева (можно менять) */
+  transform: translateY(-50%); /* Корректировка, чтобы центр кнопки совпадал с 50% высоты */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;      /* Расстояние между кнопками */
+  z-index: 4;     /* Поверх фона, затемнения и текста */
+  width: 220px;   /* Фиксированная ширина для аккуратности */
+}
+
+.btn {
+  display: block;
+  padding: 14px 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left; /* Текст кнопки прижат влево */
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Тонкая белая рамка */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+}
