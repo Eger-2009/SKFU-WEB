@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Главная</title>
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Сайт-визитка</a>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html" target="_blank">О себе</a></li>
+                <li><a href="friends.html" target="_blank">Друзья</a></li>
+                <li><a href="hobbies.html" target="_blank">Хобби</a></li>
+                <li><a href="group.html" target="_blank">Группа</a></li>
+                <li><a href="sps.html" target="_blank">ИСПС</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="mailto:birukovegor312@gmail.com?subject=Вопрос с сайта&body=Здравствуйте, "
+                class="button">Написать</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Добро пожаловать!</h1>
+                <p>Здесь собрана вся информация о моей учёбе, навыках и достижениях.</p>
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <h2>Краткая сводка</h2>
+                <p class="intro-text">В настоящее время я обучаюсь на <strong>1 курсе</strong> <a
+                        href="https://ipi.ncfu.ru/" target="_blank">Института
+                        перспективной инженерии</a> по направлению <em>«Программная инженерия».</em></p>
+                <p class="intro-text">Мне нравится процесс <em>создания программного обеспечения и поиска оптимальных
+                        решений</em> для различных задач.</p>
+                <p class="intro-text">Моя главная цель — непрерывно развиваться, накапливать практический опыт, работая
+                    в команде, и стать квалифицированным <strong>Middle-разработчиком</strong>, способным писать чистый
+                    код и создавать качественные продукты.</p>
+            </div>
+        </section>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">Проекты</a>
+            <a href="#cases" class="btn">Кейсы</a>
+            <a href="#faq" class="btn">Частые вопросы</a>
+        </div>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value">5.0</span>
+                        <span class="stat-label">Средний балл</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">15</span>
+                        <span class="stat-label">Выполнено лабораторных работ</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">Обычный студент СКФУ</span>
+                        <span class="stat-label">Статус</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside>
+            <aside>
+                <h3>Быстрые действия</h3>
+                <ul>
+                    <li><a href="about.html#skills">Перейти к навыкам ↓</a></li>
+                    <li><a href="mailto:ivanov@student.ru">Написать письмо ✉</a></li>
+                </ul>
+            </aside>
+        </aside>
+
+        <section>
+            <h2>Последние события</h2>
+            <article>
+                <h3>📅 Сданы две лабораторные по <em>плюсам</em>😲</h3>
+                <p><small>Дата: 21 сентября 2026</small></p>
+                <img src="images/first-lab-c.png" alt="Первая лаба">
+                <img src="images/second-lab-c.png" alt="Вторая лаба">
+                <p>Успешно закрыл обе лабораторнуе на оценку «отлично». Изучил основы c++ и условные операторы.<br>
+                    Теперь готов переходить к switch-case и функциям.</p>
+            </article>
+
+            <article>
+                <h3>💻 Начал работу с "Артефактом" дисциплины, связанной с front-разработкой</h3>
+                <p><small>Дата: 14 сентября 2026</small></p>
+                <img src="images/artefact.png" alt="артефакт">
+                <p>Создал папку с проектом и обдумал структуру проекта. Буду использовать HTML и CSS.</p>
+            </article>
+        </section>
+
+    </main>
+
+
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 г. Ставрополь - Бирюков Егор</p>
+        <p><small>Социальные сети: <a href="https://vk.ru/egorchik_8"
+                    target="_blank">https://vk.ru/egorchik_8</a></small></p>
+        <p><small>Создано в рамках лабораторной работы №3.</small></p>
+
+    </footer>
+
 </body>
+
 </html>
