@@ -26,38 +26,60 @@
             </ul>
         </nav>
         <div>
-            <a href="mailto:birukovegor312@gmail.com?subject=Вопрос с сайта&body=Здравствуйте," class="button">Написать</a>
+            <a href="mailto:birukovegor312@gmail.com?subject=Вопрос с сайта&body=Здравствуйте, "
+                class="button">Написать</a>
         </div>
     </header>
 
     <main>
-        <section>
-            <h2>Добро пожаловать!</h2>
-            <p>Здесь собрана вся информация о моей учебе, навыках и достижениях.</p>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Добро пожаловать!</h1>
+                <p>Здесь собрана вся информация о моей учёбе, навыках и достижениях.</p>
+            </div>
+        </section>
 
-            <hr>
+        <section class="intro">
+            <div class="container">
+                <h2>Краткая сводка</h2>
+                <p class="intro-text">В настоящее время я обучаюсь на <strong>1 курсе</strong> <a
+                        href="https://ipi.ncfu.ru/" target="_blank">Института
+                        перспективной инженерии</a> по направлению <em>«Программная инженерия».</em></p>
+                <p class="intro-text">Мне нравится процесс <em>создания программного обеспечения и поиска оптимальных
+                        решений</em> для различных задач.</p>
+                <p class="intro-text">Моя главная цель — непрерывно развиваться, накапливать практический опыт, работая
+                    в команде, и стать квалифицированным <strong>Middle-разработчиком</strong>, способным писать чистый
+                    код и создавать качественные продукты.</p>
+            </div>
+        </section>
 
-            <h3>Краткая сводка</h3>
-            <article id="brief_summary">
-                <p>Я обучаюсь на <strong>1 курсе</strong> <a href="https://ipi.ncfu.ru/" target="_blank">Института
-                        перспективной инженерии</a> на направлении <em>программная инженерия</em>.</p>
-                <p>Моя цель — стать квалифицированным разработчиком - midl-ом своего дела.</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">Проекты</a>
+            <a href="#cases" class="btn">Кейсы</a>
+            <a href="#faq" class="btn">Частые вопросы</a>
+        </div>
 
-                <dl>
-                    <dt>Средний балл:</dt>
-                    <dd>5.0</dd>
-
-                    <dt>Выполнено лабораторных работ:</dt>
-                    <dd>15</dd>
-
-                    <dt>Статус:</dt>
-                    <dd><em>Обычный студент СКФУ</em></dd>
-                </dl>
-            </article>
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value">5.0</span>
+                        <span class="stat-label">Средний балл</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">15</span>
+                        <span class="stat-label">Выполнено лабораторных работ</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">Обычный студент СКФУ</span>
+                        <span class="stat-label">Статус</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <aside>
-            <aside id="quick_actions">
+            <aside>
                 <h3>Быстрые действия</h3>
                 <ul>
                     <li><a href="about.html#skills">Перейти к навыкам ↓</a></li>
@@ -66,7 +88,7 @@
             </aside>
         </aside>
 
-        <section id="latest_events">
+        <section>
             <h2>Последние события</h2>
             <article>
                 <h3>📅 Сданы две лабораторные по <em>плюсам</em>😲</h3>
