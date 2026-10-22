@@ -20,7 +20,12 @@
                 <li><a href="friends.html">Друзья</a></li>
                 <li><a href="hobbies.html">Увлечения</a></li>
                 <li><a href="group.html">Группа</a></li>
-                <li><a href="sps.html">СПС</a></li>
+                <li>
+                    <a href="sps.html">СПС</a>
+                    <ul>
+                        <li><a href="#slovar">Терминологический словарь</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <div>
@@ -37,8 +42,10 @@
                     <hr>
 
                     <p>Данная тема посвящена изучению механизмов асинхронной интеграции в микросервисной архитектуре с
-                        использованием систем обмена сообщениями Apache Kafka и RabbitMQ. В рамках изучения рассматриваются
-                        принципы построения надёжных и отказоустойчивых потоков данных между различными сервисами платформы,
+                        использованием систем обмена сообщениями Apache Kafka и RabbitMQ. В рамках изучения
+                        рассматриваются
+                        принципы построения надёжных и отказоустойчивых потоков данных между различными сервисами
+                        платформы,
                         а также методы обеспечения целостности и надёжности передачи информации.</p>
 
                     <img src="images/kafka_big.png" alt="вторая схема" width="700">
@@ -47,13 +54,16 @@
 
                 <h2>Ключевые технологические компоненты</h2>
                 <ul>
-                    <li><strong>Apache Kafka</strong> — распределённая платформа для потоковой обработки данных</li>
-                    <li><strong>RabbitMQ</strong> — брокер сообщений для надёжной передачи данных</li>
-                    <li><strong>Микросервисная архитектура</strong> — подход к разработке приложений</li>
+                    <li><a href="https://mws.ru/cloud-platform/managed-kafka/?utm_source=ya&utm_medium=cpc&utm_campaign=c_str_s_yandex_r_rf_f_banner_pl_search_t_keys_a_cl-pl_p_mws-kafka_ct_epc_kw_all_k_n_bl_c_dt_710313978&utm_content=ch_yandex_direct%7Ccampaign_id_710313978%7Cgroup_id_5781902512%7Cad_id_1917801640038366484%7Cphrase_id_57806515369%7Ccreative_id_0%7Cposition_type_premium%7Cposition_1%7Csource_type_search%7Csrc_none%7Cdevice_type_desktop%7Cret_id_57806515369%7Cgeo_id_101271%7Cgeo_name_Михайловск%7Ccoef_0%7Ctgt_id_57806515369%7Ctgt_name_%7Cclick_id_12062383847854047231&utm_term=5iuw7k&etext=2202.YfA4UQYqc0WAtIp3jCQBo2ioS2gjr59hHuuAZPe2Th54dXVtZ3VnZnBxemJ5bnpo.5041281777d99758073f7e8c91b5c13075db8ccc&yclid=12062383847854047231"
+                            class="a-prost">Apache Kafka</a> — распределённая платформа для потоковой обработки данных</li>
+                    <li><a href="https://upshell.io/ru/courses/rabbitmq-basics?utm_source=yandex&utm_medium=cpc&utm_campaign=Search+20.07+%28beta%29&utm_term=rabbitmq&utm_content=5774688238.1916120554404355026&etext=2202._T9EigbRscJkrtMn1W7eTWJiaGl2a3dka3h6aXR1cXA.dab1e9abd9986a01ebc31c158c694d69c4db0f3f&yclid=17968460007091994623&offset=0"
+                            class="a-prost">RabbitMQ</a> — брокер сообщений для надёжной передачи данных</li>
+                    <li><a href="https://kts.tech/devops?utm_source=yandex_direct&utm_medium=search&utm_campaign=devops_audit&utm_content=tech&etext=2202.7hbLqj-SXbcSR1U8QrsS93pzGaTNS1E_A2gLndmUP_evC7tiYeAhpd2GcRl90_Cer-uukkp0uOC7lO3mCb2DEGlxampzZmhubmx0cmRiZGg.f4caf80481a75bb008ec9edc8b81456145beb560&yclid=14243904412240052223"
+                            class="a-prost">Микросервисная архитектура</a> — подход к разработке приложений</li>
                 </ul>
                 <hr>
 
-                <h2>Терминологический словарь</h2>
+                <h2 id="slovar">Терминологический словарь</h2>
                 <dl>
                     <dt>Брокер сообщений</dt>
                     <dd>Промежуточное программное обеспечение для надёжной передачи сообщений между компонентами системы
