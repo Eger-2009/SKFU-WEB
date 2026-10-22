@@ -1,22 +1,47 @@
+/* Подключение шрифтов */
 @font-face {
   font-family: "Oxygen";
-  src: url(/site/fonts/Oxygen-Regular.ttf);
+  src: url("../style/fonts/Oxygen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-.header {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oxygen", sans-serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Шапка */
+header {
   font-family: "Oxygen";
   display: flex;
   position: sticky;
   top: 0;
-  padding: 15px;
+  width: 100%;
+  padding: 1.2rem;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  background-color: rgba(248, 248, 231, 0.7);
+  background-color: rgba(248, 248, 231, 0.95);
   backdrop-filter: blur(2px);
+  z-index: 1000; 
 }
 
-.logo a {
+header > a {
   font-size: 25px;
   font-weight: 700;
   color: #98a662;
@@ -24,27 +49,14 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.logo a:hover {
+header > a:hover {
   padding: 4px 8px;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(114, 137, 152, 0.4);
   transform: translateY(-4px);
 }
 
-.menu li {
-  font-size: 20px;
-  display: inline-block;
-  margin-right: 12px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: rgb(44, 44, 44);
-  font-size: 19px;
-  font-weight: 400;
-}
-
-.button {
+.header-button {
   display: inline-block;
   padding: 16px 32px;
   background-color: #c6e74e;
@@ -60,38 +72,19 @@
   cursor: pointer;
 }
 
-.button:hover {
+.header-button:hover {
   background-color: #c6e74e;
   box-shadow: 0 6px 16px rgba(198, 255, 0, 0.5);
   transform: translateY(-4px);
 }
 
-.button:active {
+.header-button:active {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(198, 255, 0, 0.5);
 }
 
-article {
-  font-family: "Oxygen";
-}
 
-
-body {
-  font-family: "Oxygen", sans-serif;
-
-  margin: 0;
-  padding: 0;
-
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* --- Hero (первый экран) --- */
+/* изображение на начале страницы */
 .hero {
   height: 100vh;
   width: 100%;
@@ -100,15 +93,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  overflow: hidden;
+  overflow: visible; 
+  padding-top: 140px; 
 }
 
-/* Затемнение поверх фото */
+/* затемнение */
 .hero::before {
   content: "";
   position: absolute;
@@ -120,17 +109,12 @@ body {
   z-index: 1;
 }
 
+/* Контент на изображении в начале */
 .hero-content {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-
+  position: relative; 
   text-align: center;
   color: antiquewhite;
   z-index: 3;
-  max-width: 800px;
-  padding: 0 15px;
 }
 
 .hero h1 {
@@ -147,97 +131,158 @@ body {
   margin-right: auto;
 }
 
-.hero-tagline {
+/* контейнер для навигационных по странице кнопок */
+.hero-buttons-conteiner {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
+  z-index: 900;
+  width: 240px;
+  pointer-events: auto;
 }
 
-.hero-tagline span {
-  font-size: 1.5rem;
+/* сами навигационные кнопки */
+.hero-buttons {
+  display: block;
+  padding: 14px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  font-size: 1rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* --- Intro (краткая сводка) --- */
-.intro {
-  padding: 60px 0;
-  background: #fff;
-}
-
-.intro h2 {
-  font-size: 2.2rem;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.intro-text {
-  margin-bottom: 16px;
-  font-size: 1.1rem;
-}
-
-/* --- Stats (статистика) --- */
-.stats {
-  padding: 40px 0;
-  background: #f9f9f9;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  text-align: center;
-}
-
-.stat-item {
-  padding: 20px;
-  background: #fff;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 1px 8px rgba(248, 248, 231, 0.95);
+}
+
+.hero-buttons:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  transform: translateX(10px) translateY(-10%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons:active {
+  transform: translateY(0);
+}
+
+/* Навигационная панель в шапке */
+nav li {
+  font-size: 20px;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+  font-size: 20px;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  display: inline-block;
+  color: #3e946d;
+  transform: translateY(-4px);
+}
+
+
+/* контейнеры */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container-space-between-no-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.container-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.container-block {
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  min-width: 140px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container-block h2 {
+  background-color: antiquewhite;
+  color: #1a1a1a;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.container-block p {
+  background-color: aliceblue;
+  max-width: 700px;
+  line-height: 1.6;
+  color: #444;
+  font-size: 18px;
+}
+
+.container-block p > a {
+  text-decoration: none;
+  color: rgb(15, 29, 220);
+  font-size: 20px;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+
+.container-block p > a:hover {
+  color: #3e946d;
+}
+
+.container-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f0f5f5;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  min-width: 140px;
+  text-align: center;
+  flex: 1;
 }
 
 .stat-value {
-  display: block;
-  font-size: 2rem;
+  font-size: 28px;
   font-weight: 700;
-  color: #517d75;
+  color: #4a6f45;
   margin-bottom: 8px;
 }
 
 .stat-label {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.hero-buttons {
-  position: absolute;
-  top: 50%;       /* Центрируем по вертикали */
-  left: 40px;     /* Отступ слева (можно менять) */
-  transform: translateY(-50%); /* Корректировка, чтобы центр кнопки совпадал с 50% высоты */
-  display: flex;
-  flex-direction: column;
-  gap: 16px;      /* Расстояние между кнопками */
-  z-index: 4;     /* Поверх фона, затемнения и текста */
-  width: 220px;   /* Фиксированная ширина для аккуратности */
-}
-
-.btn {
-  display: block;
-  padding: 14px 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
-  color: #ffffff;
-  text-decoration: none;
-  text-align: left; /* Текст кнопки прижат влево */
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Тонкая белая рамка */
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+  letter-spacing: 0.5px;
+  color: #888;
 }
