@@ -16,7 +16,6 @@
 body {
   font-family: "Oxygen", sans-serif;
   min-height: 100vh;
-  scroll-behavior: smooth;
 }
 
 main {
@@ -25,9 +24,40 @@ main {
   gap: 20px;
 }
 
+html {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oxygen", sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; color: #3c3c3d; }
+h2 { font-size: 2rem; color: #1a1a1a; }
+h3 { font-size: 1.5rem; color: #445f33; }
+h4 { font-size: 1.125rem; color: #593353; }
+h5, h6 { font-size: 0.875rem; color: #6a724b; }
+
+p {
+  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--color-primary);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  background-color: #f3f4f6;
+  color: var(--color-text-light);
+}
+
 /* Шапка */
 header {
-  font-family: "Oxygen";
+  font-family: "Oxygen", sans-serif;
   display: flex;
   position: sticky;
   top: 0;
@@ -113,7 +143,6 @@ header > a:hover {
 .hero-content {
   position: relative; 
   text-align: center;
-  color: antiquewhite;
   z-index: 3;
 }
 
@@ -121,6 +150,7 @@ header > a:hover {
   font-size: 4rem;
   margin: 0 0 10px;
   font-weight: 700;
+  color: antiquewhite;
 }
 
 .hero p {
@@ -129,6 +159,7 @@ header > a:hover {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: antiquewhite;
 }
 
 /* контейнер для навигационных по странице кнопок */
@@ -224,7 +255,6 @@ nav a:hover {
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  text-align: center;
   min-width: 140px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -245,6 +275,7 @@ nav a:hover {
   line-height: 1.6;
   color: #444;
   font-size: 18px;
+  padding: 15px;
 }
 
 .container-block p > a {
