@@ -1,5 +1,5 @@
 :root {
-  --font-basa: "Montserrat", sans-serif;
+  --font-base: "Montserrat", sans-serif;
 }
 
 
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: var(--font-basa-oxy-sans);
+  font-family: var(--font-base);
   min-height: 100vh;
 }
 
@@ -297,6 +297,13 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 .container-block {
   display: flex;
   flex-direction: column;
@@ -332,13 +339,17 @@ nav a:hover {
 .container-block-img {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: space-around;
   margin-top: 40px;
+}
+
+.container-block-img > a {
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .container-block-img > a:hover {
   transform: translateY(-4px);
+  opacity: 0.7;
 }
 
 .container-block p > a {
@@ -482,4 +493,79 @@ nav a:hover {
 .aside-links a:hover {
     color: #c6e74e;
     border-bottom: 1px solid #c6e74e;
+}
+
+footer  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: rgba(248, 248, 231, 0.95);
+
+  padding: 1.25rem;
+}
+
+footer > div {
+  display: grid;
+  width: 100%;
+  padding: 0 2rem;
+  
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.footer-social > div {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-social img {
+  width: 3rem;
+  border-radius: 30%;
+}
+
+
+form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.75rem;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  
+}
+
+form > button {
+  font-family: var(--font-base);
+  font-weight: 700;
+  border: 5px solid #a29f83;
+  border-radius: 20px;  
+
+  color: #ffffff;
+  background-color: #000000;
+}
+
+input {
+  font-family: var(--font-base);
+  padding: 0.4rem;
+  border: 4px solid #000000;
+  border-radius: 8px;
+}
+
+#contact-form-name {
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: none;
 }
