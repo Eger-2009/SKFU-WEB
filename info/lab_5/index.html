@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Встраивание видео и аудио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <h1>Медиа-контент</h1>
+
+        <p>
+            Управляйте плеерами с клавиатуры: пробел — воспроизведение,
+            стрелки — громкость и перемотка.
+        </p>
+
+        <section class="media-container" aria-labelledby="video-title">
+            <h2 id="video-title">Обучающее видео</h2>
+
+            <p id="video-description">
+                Видеоурок по основам веб-разработки. Есть субтитры на русском языке.
+            </p>
+
+            <figure class="player">
+                <video controls width="600" preload="auto"
+                    poster="media/image.png" aria-describedby="video-description">
+                    <source src="media/video.mp4" type="video/mp4">
+                    <source src="media/video.webm" type="video/webm">
+                    <track kind="subtitles" src="media/subtitles-ru.vtt" srclang="ru"
+                        label="Русский" default>
+                    <p class="player__fallback">
+                        Ваш браузер не поддерживает встроенное видео.
+                        <a href="media/video.mp4">Скачайте файл видео</a>
+                        и откройте в плеере.
+                    </p>
+                </video>
+
+                <figcaption class="player__caption">
+                    Длительность: 13 секунд. Видео сопровождается субтитрами.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="media-container" aria-labelledby="audio-title">
+            <h2 id="audio-title">Аудиоподкаст</h2>
+
+            <p>Выпуск подкаста «Как учиться программированию».</p>
+
+            <figure class="player">
+                <audio controls preload="metadata">
+                    <source src="media/audio.mp3" type="audio/mpeg">
+                    <source src="media/audio.ogg" type="audio/ogg">
+                    <p class="player__fallback">
+                        Ваш браузер не поддерживает встроенное аудио.
+                        <a href="media/audio.mp3">Скачайте аудиофайл</a>.
+                    </p>
+                </audio>
+
+                <figcaption class="player__caption">
+                    Выпуск №15. Время звучания: 9 секунд.
+                </figcaption>
+            </figure>
+
+            <div class="media-container__decor" aria-hidden="true">🎵</div>
+        </section>
+
+        <details class="media-container">
+            <summary class="transcript__summary">
+                Текстовая расшифровка (для пользователей скринридеров)
+            </summary>
+            <div>
+                <h3 class="transcript__heading">Начало видео</h3>
+                <p class="transcript__text">
+                    Всем привет! Это выпуск подкаста на тему «Как научиться программировать»
+                </p>
+            </div>
+        </details>
+    </main>
+</body>
+
+</html>
